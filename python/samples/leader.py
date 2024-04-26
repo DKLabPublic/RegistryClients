@@ -22,7 +22,7 @@ def elect_leader(name):
     client = RegistryClient(INSTANCE, ORG_NAME, ORG_KEY)
     is_leader = False
     expiration = 0
-    t_end = time.time() + 30
+    t_end = time.time() + RUN_TIME_SECS
     while time.time() < t_end:
         try:
             # Usually `playtime_secs` is greater than 3. Use a small number here to
